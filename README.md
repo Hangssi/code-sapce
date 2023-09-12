@@ -41,53 +41,52 @@ int main()
 #include <time.h>
 void menu()
 {
-    printf("####1. paly ####\n");
-    printf("####0. exit  ####\n");
+   printf("####1. paly ####\n");
+   printf("####0. exit  ####\n");
 }
 void game()
 {
-    int guess = 0;
-	int ret = rand()%100+1;
-    while(1)
+  int guess = 0;
+  int ret = rand()%100+1;
+  while(1)
     	{
-    		printf("请猜数字:>");
-    		scanf("%d", &guess);
-    		if(guess>ret)
-    			{
-        			printf("太大了\n");
-    			}
-    		else if(guess<ret)
-    			{
-        			printf("太小了\n");
-    			}
-    		else
-    			{
-        			printf("猜到了\n");
-                    break;
-    			}
-    	}
+    	  	printf("请猜数字:>");
+    		  scanf("%d", &guess);
+    		  if(guess>ret)
+    			   {
+        			 printf("太大了\n");
+    			   }
+    		  else if(guess<ret)
+    			   {
+        			 printf("太小了\n");
+    			   }
+    		  else
+    			   {
+        			 printf("猜到了\n");
+           break;
+    			   }
+    	 }
 }
 int main()
 {
-    srand((unsigned int)time(NULL ));
-    int  input = 0;
-    
+    srand((unsigned int)time(NULL));
+    int input = 0;
     do
     {
-        menu();
-        printf("请选择:>");
-        scanf("%d", &input);
-        switch(input)
+       menu();
+       printf("请选择:>");
+       scanf("%d", &input);
+       switch(input)
         {
-            case 1:
-            	game();
-            	break;
-            case 0:
-            	printf("退出游戏\n");
-                break;
-            default:
-            	printf("选择错误, 重新选择!\n");
-                break;
+          case 1:
+          	game();
+          	break;
+          case 0:
+          	printf("退出游戏\n");
+           break;
+           default:
+           printf("选择错误, 重新选择!\n");
+           break;
         }
     }while(input);
     return 0;
