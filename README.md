@@ -91,3 +91,23 @@ int main()
     }while(input);
     return 0;
  }
+
+#####函数递归###
+#include <stdio.h>
+
+void print(unsigned int n)
+	{
+        if (n > 9)
+    	{
+            print(n/10);
+        }
+        printf("%d ", n % 10);
+    }
+int main(int argc, char** argv)
+  {
+    unsigned int num = 0;
+    scanf("%u", &num);
+    print(num);
+    
+    return 0;
+  }
