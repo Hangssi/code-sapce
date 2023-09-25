@@ -111,3 +111,27 @@ int main(int argc, char** argv)
     
     return 0;
   }
+
+###不创建临时变量，求字符长度###
+#include <stdio.h>
+#include <string.h>
+
+
+int my_strlen(char* str)
+    {
+        if(*str != '\0')
+        {
+            return 1 + my_strlen(str+1);
+        }
+        else
+        {
+            return 0;
+        };
+    }
+    int main(int argc,char** argv) 
+    {
+    int len = my_strlen("abc");
+    printf("%d", len);
+    return 0;
+  }
+
