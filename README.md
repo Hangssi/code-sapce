@@ -135,3 +135,129 @@ int my_strlen(char* str)
     return 0;
   }
 
+#####练习###
+#include <stdio.h>
+/*void Swap(int* px, int* py)
+{
+    int tmp = *px;
+    *px = *py;
+    *py = tmp;
+    
+}
+int main(int argc, char** argv)
+ {
+     int a = 0;
+     int b = 0;
+     int c = 0;
+     scanf("%d  %d %d", &a, &b, &c);
+     if(a < b)
+     {
+         Swap(&a, &b);
+     }
+     if(a < c)
+     {
+         Swap(&a, &c);
+     }
+     if(b < c)
+     {
+         Swap(&b, &c);
+     }
+     printf("%d %d %d", a, b, c);
+     return 0;
+  }
+
+int main(int argc,char** argv)
+{
+    int a = 0;
+    int b = 0;
+    int c = 0;
+    scanf("%d %d", &a, &b);
+    while(c = a%b)
+    {
+        a = b;
+        b = c;
+    }
+    printf("%d", b);
+    return 0;
+}
+int main(int argc,char** argv) 
+{
+    int i = 1;
+    int count = 0;//计数
+    for(int i = 1;i <= 100;i++) 
+    {
+        if(i % 10 == 9)//判断个位是不是9
+        {
+            printf("%d\n", i);
+       	 count++;
+        }
+        if(i / 10 == 9)//判断十位是不是9
+        {
+            printf("%d\n", i);
+       	 count++;
+        }
+    }
+   printf("%d\n", count);
+    return 0;
+}
+
+int main(int argc,char** argv) 
+{
+    int i = 0;
+    double sum = 0;
+    int flag = 1;
+    for(int i = 1;i <= 100;i++) 
+    {
+        sum = sum + flag*(1.0 / i);
+        flag = -flag;
+    }
+    printf("%lf\n", sum);
+    
+    return 0;
+}
+//###找出最大值
+int main(int argc,char** argv) 
+{
+    
+    int arr[10] = {0};
+    int i = 0;
+    for(i = 0;i < 10;i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+    int max = arr[0];
+    for(int i = 1;i < 10;i++) 
+    {
+        if(max < arr[i])
+        {
+            max = arr[i];
+        }
+    }
+    printf("%d\n", max);
+    return 0;
+}
+
+void chen(int n)
+{
+    int i = 0;
+    
+    for(i = 1;i <= n;i++) 
+    {
+        int j = 0;
+        for(j = 1;j <= i;j++) 
+        {
+            printf("%d*%d=%-2d ", i, j, i * j);
+            
+        }
+       printf("\n");
+    }
+}
+int main(int argc,char** argv) 
+{
+    int n = 0;
+    scanf("%d", &n);
+    chen(n);
+    return 0;
+    
+    
+}*/
