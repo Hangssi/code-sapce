@@ -300,3 +300,41 @@ int main(int argc, char** argv)
      }
      return 0;
  }
+####冒泡2##
+#include <stdio.h>
+
+void bubble_sort(int arr[], int sz) 
+{
+    for (int i = 0; i < sz - 1; i++) 
+    {
+        for (int j = 0; j < sz - 1 - i; j++) 
+        {
+            if (arr[j] > arr[j + 1]) 
+            {
+                int tmp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tmp;
+            }
+        }
+    }
+}
+
+int main(int argc, char** argv) {
+    int sz;
+    printf("请输入数组的大小：");
+    scanf("%d", &sz);
+
+    int arr[sz];
+    printf("请输入 %d 个整数，以空格分隔：", sz);
+    for (int i = 0; i < sz; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    bubble_sort(arr, sz);
+    printf("排序后的数组：");
+    for (int i = 0; i < sz; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
